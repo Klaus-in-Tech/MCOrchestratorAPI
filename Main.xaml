@@ -1,0 +1,185 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.in_surname="Kaweesi" this:Sequence.in_middleName="Kakooza" this:Sequence.in_lastName="Kakooza" this:Sequence.in_phoneNumber="256754011063" this:Sequence.in_email="kakoozaa2@stanbic.com" this:Sequence.in_saleAmount="5000000" this:Sequence.in_mortgageTerm="400000000" this:Sequence.in_monthlyIncome="120" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_surname" Type="InArgument(x:String)" />
+    <x:Property Name="in_middleName" Type="InArgument(x:String)" />
+    <x:Property Name="in_lastName" Type="InArgument(x:String)" />
+    <x:Property Name="in_phoneNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_email" Type="InArgument(x:String)" />
+    <x:Property Name="in_saleAmount" Type="InArgument(x:String)" />
+    <x:Property Name="in_mortgageTerm" Type="InArgument(x:String)" />
+    <x:Property Name="in_monthlyIncome" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>998,1485</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Capturing Client Details" sap:VirtualizedContainerService.HintSize="405,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_outputData" />
+      <Variable x:TypeArguments="x:String" Name="str_button" />
+      <Variable x:TypeArguments="njl:JObject" Name="formData" />
+      <Variable x:TypeArguments="x:String" Name="interestRate" />
+      <Variable x:TypeArguments="x:String" Name="loanToInstallmentRatio" />
+      <Variable x:TypeArguments="x:String" Name="initialDepositPercentage" />
+      <Variable x:TypeArguments="x:String" Name="taxRate" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="insuranceCost" />
+      <Variable x:TypeArguments="x:String" Name="mortgageAmount" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="monthlyPayment" />
+      <Variable x:TypeArguments="x:String" Name="maximumMonthlyPayments" />
+      <Variable x:TypeArguments="x:String" Name="taxAmount" />
+      <Variable x:TypeArguments="x:String" Name="initialDeposit" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Initial_Deposit workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Calculating_Initial_Deposit.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_saleAmount">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_saleAmount" />
+        </InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_initialDeposit">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="initialDeposit" />
+        </InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_initialDepositPercentage">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="initialDepositPercentage" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Insurance_Cost workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Calculating_Insurance_Cost.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InOutArgument x:TypeArguments="ui:GenericValue" x:Key="io_insuranceCost">
+          <mva:VisualBasicReference x:TypeArguments="ui:GenericValue" ExpressionText="insuranceCost" />
+        </InOutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Maximum_Monthly_Payments workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Calculating_Maximum_Monthly_Payments.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_monthlyIncome">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_monthlyIncome" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_loanToInstallmentRatio">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="loanToInstallmentRatio" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_maximumMonthlyPayments">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="maximumMonthlyPayments" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Monthly_Payments workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Calculating_Monthly_Payments.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_monthlyPayment">[monthlyPayment]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Mortgage_Amount workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Calculating_Mortgage_Amount.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_saleAmount">[in_saleAmount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_initialDeposit">[initialDeposit]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_mortgageAmount">[mortgageAmount]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Calculating_Tax_Amount workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Calculating_Tax_Amount.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_saleAmount">[in_saleAmount]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_taxAmount">[taxAmount]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_taxRate">[taxRate]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Reading_Interest_Rate workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Reading_Interest_Rate.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_interestRate">[interestRate]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Displaying_Client_Mortgage_Details workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Displaying_Client_Mortgage_Details.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_taxAmount">[taxAmount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_insuranceCost">[insuranceCost]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_initialDeposit">[initialDeposit]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_mortgageAmount">[mortgageAmount]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_monthlyPayment">[monthlyPayment]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_maximumMonthlyPayments">[maximumMonthlyPayments]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_taxRate">[taxRate]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_initialDepositPercentage">[initialDepositPercentage]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_interestRate">[interestRate]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_loanToInstallmentRatio">[loanToInstallmentRatio]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Sending_Email workflow" sap:VirtualizedContainerService.HintSize="363,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Sending_Email.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_receiversEmail">[in_email]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="surname">[in_surname]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
